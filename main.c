@@ -1,31 +1,27 @@
 #include <stdio.h>
 #include "my_mat.h"
-
-int main()
-{
-    char input;
-    while (scanf("%c ", &input) != EOF)
-    {
-        if (input == 'A')
-        {
+int main(){
+    char data;
+    while(data != 'D'){
+        scanf("%c", &data);
+        //if the user press A we define the mtrix that is recived
+        if(data=='A'){
             receivematrix();
         }
-        else if (input == 'B')
-        {
-            int i, j;
-            scanf("%d %d", &i, &j);
-            istherepath(i, j);
+        //else if the user press b, we return if there is a path or not for the index
+        else if(data=='B'){
+            int a, b;
+            scanf("%d %d", &a, &b);
+            istherepath(a,b);
         }
-        else if (input == 'C')
-        {
-            int i, j;
-            scanf("%d %d", &i, &j);
-            printshortestpath(i, j);
-        }
-        else if (input == 'D')
-        {
-            break;
+        //else if the user press c, we return the shortest path for the index from i to j
+        else if(data=='C'){
+             int z, b;
+            scanf("%d %d", &z, &b);
+            int a = printshortestpath(z,b);
+            printf("%d\n" ,a);     
         }
     }
     return 0;
+
 }
