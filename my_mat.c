@@ -7,17 +7,18 @@ int matrix[dimension][dimension];
 
 //function 1, when the user press 'A'
 //in this function we receice the matrix from the user 
-void receivematrix(){
+void receivematrix(int matrix[dimension][dimension]){
     //using 2 for loops for the column and row
     for(int k = 0;k<dimension;k++){
         for(int p=0;p<dimension;p++){
          //using a scan to get the value in index [k][p] for the matrix
-            scanf("%d", &matrix[k][p]);
             //if the matrix is 0 we define it as "infinte"
             //to help with the function of finding the shortest path
             if(matrix[k][p]==0){
                 matrix[k][p]=infinte;
             }
+            else {
+                matrix[k][p]=matirx[k][p];
         }
 
     }
